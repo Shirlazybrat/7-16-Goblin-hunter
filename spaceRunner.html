@@ -32,8 +32,8 @@ var canvas = document.createElement('canvas');
 var context = canvas.getContext('2d');
 
 // give the canvas tag some substance
-canvas.width = 512;
-canvas.height = 480;
+canvas.width = 800;
+canvas.height = 518;
 
 console.log(canvas);
 //console.dir(canvas);
@@ -41,7 +41,7 @@ console.log(canvas);
 document.body.appendChild(canvas);
 
 var bgImage = new Image();
-bgImage.src = "images/background.png";
+bgImage.src = "images/space.gif";
 
 //OUR STUFF WILL GO HERE
 var hero = new Image();
@@ -83,8 +83,8 @@ function draw(){
 }
 
 function goblinReset(){
-	goblinLocation.x = Math.random() * 512;
-	goblinLocation.y = Math.random() * 480;
+	goblinLocation.x = Math.random() * 800;
+	goblinLocation.y = Math.random() * 518;
 }
 
 //Up - 38
@@ -113,19 +113,19 @@ function update(){
 	}
 
 //move the  hero to opposite side if he goes off the screen
-	if(heroLocation.x > 512){
+	if(heroLocation.x > 800){
 		heroLocation.x = 0;
 	}
 	if(heroLocation.x < 0){
-		heroLocation.x = 512;
+		heroLocation.x = 800;
 	}
 
-	if(heroLocation.y > 480){
+	if(heroLocation.y > 518){
 		heroLocation.y = 0;
 	}
 
 	if(heroLocation.y < 0){
-		heroLocation.y = 480;
+		heroLocation.y = 518;
 	}
 
 // If the hero runs into the goblin, do x
