@@ -45,7 +45,7 @@ bgImage.src = "images/space.gif";
 
 //OUR STUFF WILL GO HERE
 var hero = new Image();
-hero.src = "images/hero.png";
+hero.src = "images/right1.png";
 var heroLocation = {
 	x: 100,
 	y: 100
@@ -97,18 +97,22 @@ function update(){
 	console.log(keysDown);
 	if(39 in keysDown){
 		//move him right
+		hero.src = "images/right1.png";
 		heroLocation.x += 10;
 	}
 	if(37 in keysDown){
 		//move him left
+		hero.src = "images/left1.png";
 		heroLocation.x -= 10;
 	}
 	if(38 in keysDown){
 		//move him up
+		hero.src = "images/up1.png";
 		heroLocation.y -= 10;
 	}
 	if(40 in keysDown){
 		//move him down
+		hero.src = "images/down1.png";
 		heroLocation.y += 10;
 	}
 
